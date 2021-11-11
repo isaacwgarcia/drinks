@@ -58,7 +58,7 @@ export default function Home() {
           }}
         >
           {" "}
-          Tell us what you have in mind and we will options to drink
+          Tell us what you have in mind and we will give you options to drink
         </Box>
         <Box
           sx={{
