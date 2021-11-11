@@ -3,6 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
 import createEmotionCache from "../styles/createEmotionCache";
+import { StateProvider } from "../components/state/AppContext";
 
 import "/styles/globals.css";
 import theme from "../styles/theme";
@@ -22,7 +23,9 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <StateProvider>
+          <Component {...pageProps} />
+        </StateProvider>
       </ThemeProvider>
     </CacheProvider>
   );
