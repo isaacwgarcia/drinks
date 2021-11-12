@@ -37,7 +37,7 @@ export async function getDrinksbyName(name: any) {
               }}
     `
     );
-    console.log("Response Query", data.list_of_drinks);
+
     return data;
   } catch (e) {
     return e.message;
