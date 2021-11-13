@@ -2,6 +2,7 @@ import React from "react";
 import { Paper, Button } from "@mui/material";
 import dynamic from "next/dynamic";
 import Box from "@mui/material/Box";
+import Image from "next/image";
 
 import { useAppContext } from "../components/state/AppContext";
 
@@ -36,8 +37,26 @@ export default function Carrousel() {
               background: "white",
             }}
           >
-            <h2>{context_app.drinks[i].strDrink}</h2>
-            <img src={context_app.drinks[i].strDrinkThumb} />
+            <Box>
+              <h2>{context_app.drinks[i].strDrink}</h2>{" "}
+            </Box>
+
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+                zIndex: "1",
+                background: "white",
+              }}
+            >
+              <Image
+                src={context_app.drinks[i].strDrinkThumb}
+                width={300}
+                height={300}
+              />
+            </Box>
           </Box>
         </Paper>
       ))}

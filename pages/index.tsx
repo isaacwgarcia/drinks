@@ -19,6 +19,7 @@ export default function Home() {
 
   async function searchResults(drink: string) {
     const result = await getDrinksbyName(drink);
+
     drinks = result.list_of_drinks.drinks;
 
     dispatch_app({

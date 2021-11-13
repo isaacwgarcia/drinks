@@ -23,7 +23,7 @@ async function fetchAPI(query: any, { variables }: APIConnection = {}) {
   return json.data;
 }
 
-export async function getDrinksbyName(name: any) {
+export async function getDrinksbyName(name: string) {
   try {
     const data = await fetchAPI(
       `   
