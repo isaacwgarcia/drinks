@@ -53,12 +53,16 @@ export default function Home() {
         }}
       >
         <Box
+          display="flex"
+          justifyContent="center"
+          textAlign="center"
           sx={{
             marginTop: "5vh",
-            marginBottom: "5vh",
+            marginBottom: "3vh",
+            marginLeft: "10vw",
+            marginRight: "10vw",
           }}
         >
-          {" "}
           Tell us what you have in mind and we will give you options to drink
         </Box>
         <Box
